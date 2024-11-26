@@ -22,7 +22,8 @@ function calculateFixedPoint() {
                 .replace(/sin\(/g, 'Math.sin(')
                 .replace(/cos\(/g, 'Math.cos(')
                 .replace(/tan\(/g, 'Math.tan(')
-                .replace(/log\(/g, 'Math.log(');
+                .replace(/log\(/g, 'Math.log(')
+                .replace(/ln\(/g, 'Math.log(');
                 
             const func = new Function('x', `return ${preparedInput}`);
             return func(x);
